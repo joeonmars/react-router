@@ -1,45 +1,40 @@
-<p align="center">
-  <a href="https://reacttraining.com/react-router/">
-    <img alt="react-router" src="https://reacttraining.com/react-router/android-chrome-144x144.png" width="144">
-  </a>
-</p>
+# react-router
 
-<h3 align="center">
-  React Router
-</h3>
+Declarative routing for [React](https://facebook.github.io/react).
 
-<p align="center">
-  Declarative routing for <a href="https://facebook.github.io/react">React</a>
-</p>
+## Installation
 
-<p align="center">
-  <a href="https://www.npmjs.com/package/react-router"><img src="https://img.shields.io/npm/v/react-router.svg?style=flat-square"></a>
-  <a href="https://www.npmjs.com/package/react-router"><img src="https://img.shields.io/npm/dm/react-router.svg?style=flat-square"></a>
-  <a href="https://travis-ci.org/ReactTraining/react-router"><img src="https://img.shields.io/travis/ReactTraining/react-router/master.svg?style=flat-square"></a>
-</p>
+Using [npm](https://www.npmjs.com/):
 
-## Docs
+    $ npm install --save react-router
 
-**[View the docs here](https://reacttraining.com/react-router)**
+**Note:** This package provides the core routing functionality for React Router, but you might not want to install it directly. If you are writing an application that will run in the browser, you should instead install `react-router-dom`. Similarly, if you are writing a React Native application, you should instead install `react-router-native`. Both of those will install `react-router` as a dependency.
 
-[Migrating from 2.x/3.x?](/packages/react-router/docs/guides/migrating.md)
 
-[3.x docs](https://github.com/ReactTraining/react-router/blob/v3/docs)
+Then with a module bundler like [webpack](https://webpack.github.io/), use as you would anything else:
 
-[2.x docs](https://github.com/ReactTraining/react-router/blob/v2.8.1/docs)
+```js
+// using ES6 modules
+import { Router, Route, Switch } from 'react-router'
 
-## Packages
+// using CommonJS modules
+var Router = require('react-router').Router
+var Route = require('react-router').Route
+var Switch = require('react-router').Switch
+```
 
-This repository is a monorepo that we manage using [Lerna](https://github.com/lerna/lerna). That means that we actually publish [several packages](/packages) to npm from the same codebase, including:
+The UMD build is also available on [unpkg](https://unpkg.com):
 
-| Package                                                | Version                                                                                                                                   | Docs                                                                                                                                                                                                                                                                          | Description                                                                        |
-| ------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| [`react-router`](/packages/react-router)               | [![npm](https://img.shields.io/npm/v/react-router.svg?style=flat-square)](https://www.npmjs.com/package/react-router)                     | [![](https://img.shields.io/badge/API%20Docs-site-green.svg?style=flat-square)](https://reacttraining.com/react-router/core/guides/quick-start) [![](https://img.shields.io/badge/API%20Docs-markdown-lightgrey.svg?style=flat-square)](/packages/react-router/docs)          | The core of React Router                                                           |
-| [`react-router-dom`](/packages/react-router-dom)       | [![npm](https://img.shields.io/npm/v/react-router-dom.svg?style=flat-square)](https://www.npmjs.com/package/react-router-dom)             | [![](https://img.shields.io/badge/API%20Docs-site-green.svg?style=flat-square)](https://reacttraining.com/react-router/web/guides/quick-start) [![](https://img.shields.io/badge/API%20Docs-markdown-lightgrey.svg?style=flat-square)](/packages/react-router-dom/docs)       | DOM bindings for React Router                                                      |
-| [`react-router-native`](/packages/react-router-native) | [![npm](https://img.shields.io/npm/v/react-router-native.svg?style=flat-square)](https://www.npmjs.com/package/react-router-native)       | [![](https://img.shields.io/badge/API%20Docs-site-green.svg?style=flat-square)](https://reacttraining.com/react-router/native/guides/quick-start) [![](https://img.shields.io/badge/API%20Docs-markdown-lightgrey.svg?style=flat-square)](/packages/react-router-native/docs) | [React Native](https://facebook.github.io/react-native/) bindings for React Router |
-| [`react-router-redux`](/packages/react-router-redux)   | [![npm](https://img.shields.io/badge/npm-v5.0.0--alpha.7-orange.svg?style=flat-square)](https://www.npmjs.com/package/react-router-redux) | [![](https://img.shields.io/badge/API%20Docs-readme-orange.svg?style=flat-square)](/packages/react-router-redux/#readme)                                                                                                                                                      | Integration with React Router and Redux                                            |
-| [`react-router-config`](/packages/react-router-config) | [![npm](https://img.shields.io/npm/v/react-router-config.svg?style=flat-square)](https://www.npmjs.com/package/react-router-config)       | [![](https://img.shields.io/badge/API%20Docs-readme-orange.svg?style=flat-square)](/packages/react-router-config/#readme)                                                                                                                                                     | Static route config helpers                                                        |
+```html
+<script src="https://unpkg.com/react-router/umd/react-router.min.js"></script>
+```
 
-## About
+You can find the library on `window.ReactRouter`.
 
-`react-router` is developed and maintained by [React Training](https://reacttraining.com) and many [amazing contributors](https://github.com/ReactTraining/react-router/graphs/contributors). If you're interested in learning more about what React can do for your company, please [get in touch](mailto:hello@reacttraining.com)!
+## Issues
+
+If you find a bug, please file an issue on [our issue tracker on GitHub](https://github.com/ReactTraining/react-router/issues).
+
+## Credits
+
+React Router is built and maintained by [React Training](https://reacttraining.com).

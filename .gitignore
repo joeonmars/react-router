@@ -1,3 +1,5 @@
+es
 node_modules
-lerna-debug.log
-npm-debug.log
+umd
+/*.js
+!rollup.config.js
