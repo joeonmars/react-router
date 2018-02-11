@@ -1,7 +1,6 @@
 import warning from "warning";
 import React from "react";
 import PropTypes from "prop-types";
-import { createMemoryHistory as createHistory } from "history";
 import Router from "./Router";
 
 /**
@@ -9,25 +8,12 @@ import Router from "./Router";
  */
 class MemoryRouter extends React.Component {
   static propTypes = {
-    initialEntries: PropTypes.array,
-    initialIndex: PropTypes.number,
-    getUserConfirmation: PropTypes.func,
-    keyLength: PropTypes.number,
+    history: PropTypes.object,
     children: PropTypes.node
   };
 
-  history = createHistory(this.props);
-
-  componentWillMount() {
-    warning(
-      !this.props.history,
-      "<MemoryRouter> ignores the history prop. To use a custom history, " +
-        "use `import { Router }` instead of `import { MemoryRouter as Router }`."
-    );
-  }
-
   render() {
-    return <Router history={this.history} children={this.props.children} />;
+    return <Router history={this.props.history} children={this.props.children} />;
   }
 }
 
